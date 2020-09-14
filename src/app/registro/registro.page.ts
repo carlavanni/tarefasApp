@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
-import { CpfValidator } from '../validators/cpf.validator';
+import { CpfValidator } from '../validators/cpf-validator';
 import { ComparacaoValidator } from '../validators/comparacao-validator';
 import { UsuariosService } from '../services/usuarios.service';
 import { AlertController } from '@ionic/angular';
