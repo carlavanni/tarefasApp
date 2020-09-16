@@ -87,7 +87,7 @@ export class RegistroPage implements OnInit {
 
       let usuario = new Usuario();
       usuario.nome = this.formRegistro.value.nome;
-      usuario.cpf = this.formRegistro.value.cpf;
+      usuario.cpf = this.formRegistro.value.CPF;
       usuario.dataNascimento = new Date( this.formRegistro.value.dataNascimento);
       usuario.genero = this.formRegistro.value.genero;
       usuario.celular = this.formRegistro.value.celular;
@@ -102,7 +102,7 @@ export class RegistroPage implements OnInit {
       }
 
     }else{
-this.exibirAlerta('ADVERTENCIA!', 'Formulario invalido <br> Verifique os campos do seu formulario!');
+this.exibirAlerta('ADVERTENCIA!', 'Formulario invalido <br/> Verifique os campos do seu formulario!');
     }
   }
   async exibirAlerta(titulo: string, mensagem:string) {
