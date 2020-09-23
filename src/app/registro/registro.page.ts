@@ -21,7 +21,7 @@ export class RegistroPage implements OnInit {
       {tipo: 'required', mensagem: 'O campo nome é obrigatório!'},
       {tipo: 'minlength', mensagem: 'O nome deve ter pelo menos 3 caracteres!'}
     ],
-    CPF: [
+    cpf: [
       {tipo: 'required', mensagem: 'O campo CPF é obrigatório!'},
       {tipo: 'minlength', mensagem: 'O CPF deve ter pelo menos 11 caracteres!'},
       {tipo: 'maxlength', mensagem: 'O CPF deve ter no máximo 14 caracteres!'},
@@ -62,7 +62,7 @@ export class RegistroPage implements OnInit {
     ) {
     this.formRegistro = formBuilder.group({
       nome: ['', Validators.compose([Validators.required, Validators.minLength(3) ])],
-      CPF: ['', Validators.compose([Validators.required, Validators.minLength(11), 
+      cpf: ['', Validators.compose([Validators.required, Validators.minLength(11), 
         Validators.maxLength(14), CpfValidator.cpfValido])],
 
       celular: ['', Validators.compose([Validators.required, Validators.maxLength(16) ])],
@@ -87,7 +87,7 @@ export class RegistroPage implements OnInit {
 
       let usuario = new Usuario();
       usuario.nome = this.formRegistro.value.nome;
-      usuario.cpf = this.formRegistro.value.CPF;
+      usuario.cpf = this.formRegistro.value.cpf;
       usuario.dataNascimento = new Date( this.formRegistro.value.dataNascimento);
       usuario.genero = this.formRegistro.value.genero;
       usuario.celular = this.formRegistro.value.celular;

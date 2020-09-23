@@ -32,10 +32,10 @@
 
 <ion-item lines="none">
   <ion-label position="stacked">CPF</ion-label>
-  <ion-input [brmasker]="{person: true}" maxLenght="14" formControlName="CPF" type="text" placeholder="Digite seu CPF"></ion-input>
-  <ng-container *ngFor="let erro of mensagens_validacao.CPF">
+  <ion-input [brmasker]="{person: true}" maxLenght="14" formControlName="cpf" type="text" placeholder="Digite seu CPF"></ion-input>
+  <ng-container *ngFor="let erro of mensagens_validacao.cpf">
     <span class = "msg-erro"
-     *ngIf="formRegistro.get('CPF').hasError(erro.tipo) && (formRegistro.get('CPF').dirty || formRegistro.get('CPF').touched)">
+     *ngIf="formRegistro.get('cpf').hasError(erro.tipo) && (formRegistro.get('cpf').dirty || formRegistro.get('cpf').touched)">
     {{erro.mensagem}}
     </span>
         </ng-container>
